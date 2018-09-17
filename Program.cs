@@ -792,14 +792,14 @@ namespace WhiteWizard
             
             
         }
-        static void GUI(string playerName,int playerHP, int playerMaxHP, int itemsMax,int currentItems,int playerXP,int playerMaxXP)
+        static void GUI()
         {
             //GUI
             Console.Clear();
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
             Console.SetCursorPosition(0, 1);
-            Console.WriteLine("|    Health:{0}/{1}                 |                 XP:{2}/{3}                 |         Name:{4}  Items:{5}/{6}          ", playerHP, playerMaxHP, playerXP, playerMaxXP, playerName, currentItems, itemsMax);
+            Console.WriteLine("|    Health:{0}/{1}                 |                 XP:{2}/{3}                 |         Name:{4}  Items:{5}/{6}          ");
             Console.SetCursorPosition(119, 1);
             Console.WriteLine("|");
             Console.SetCursorPosition(0, 2);
@@ -937,25 +937,26 @@ namespace WhiteWizard
         }
         static void Main(string[] args)
         {
+            //Clear console for debugging mode only
             Console.Clear();
 
-            //variables and sets
+            //variables and boot sets
             Console.Title = "The White Wizard";
             Console.WindowWidth =85;
             Console.WindowHeight = 28;
             Player currentPlayer = new Player();
             
-            int x, y;
-            bool gameOver = false;
-            int[] decision = new int[1];
-            int[] whiteWizard = new int[5];
-            string commandLine = "a";
-            int CEVA = 0;
-            int dec = 0;
-            
             IntroLevel.Start(ref currentPlayer);
+            MainMenuScreen.Show();
 
-            Console.WriteLine(currentPlayer.GetName());
+            Console.ReadKey();
+
+
+            //Start of the game
+            /* IntroLevel.Start(ref currentPlayer);
+
+            Console.WriteLine(currentPlayer.GetName()); */
+            
             
            /*
             string[] inventory = new string[itemsMax];
@@ -963,8 +964,7 @@ namespace WhiteWizard
            
             //prologue Level
            
-            Console.WindowWidth = 120;
-            Console.WindowHeight = 30;
+            
            
             GUI(playerName, playerHP, playerMaxHP, itemsMax, currentItems, playerXP, playerMaxXP);
             Console.Clear(); 

@@ -9,8 +9,8 @@ namespace WhiteWizard {
 
         private static void IntroText(){
 
-            string introDrawing = System.IO.File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Levels\Drawings\introDrawing.txt");
-            string introCommand = System.IO.File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Levels\Drawings\introCommand.txt");
+            string introDrawing = System.IO.File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Drawings\introDrawing.txt");
+            string introCommand = System.IO.File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Drawings\introCommand.txt");
 
             //Intro text that is displayed when running the program
             Console.WriteLine(introDrawing);
@@ -61,6 +61,9 @@ namespace WhiteWizard {
                 playerName = Console.ReadLine();
                 if (playerName == ""){
                     nameIsCorrect = false;
+                }
+                else if(playerName == "exit"){
+                    Environment.Exit(0);
                 }
                 else{
                     nameIsCorrect = true;
@@ -236,6 +239,7 @@ namespace WhiteWizard {
             //Initialize the player charcter with the stats
             player = new Player(playerName,playerHP,playerMaxHP,playerXP,playerMaxXP,playerClass,playerStr,playerMagic,playerRange,itemsMax,playerColor);
 
+            Console.Clear();
         }
     }  
 }
