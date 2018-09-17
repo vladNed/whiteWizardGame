@@ -792,24 +792,6 @@ namespace WhiteWizard
             
             
         }
-        static void GUI()
-        {
-            //GUI
-            Console.Clear();
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
-            Console.SetCursorPosition(0, 1);
-            Console.WriteLine("|    Health:{0}/{1}                 |                 XP:{2}/{3}                 |         Name:{4}  Items:{5}/{6}          ");
-            Console.SetCursorPosition(119, 1);
-            Console.WriteLine("|");
-            Console.SetCursorPosition(0, 2);
-            Console.WriteLine("|----------------------------------------------------------------------------------------------------------------------|");
-            Console.SetCursorPosition(0, 3);
-            Console.WriteLine("|    Command:                 ");
-            Console.SetCursorPosition(119, 3);
-            Console.WriteLine("||----------------------------------------------------------------------------------------------------------------------|");
-            Console.SetCursorPosition(1,5);
-        }  
         static void invCommand(int itemsMax,string[]inventory,string commandLine,bool gameOver,int inGame,int CEVA)
         {
             
