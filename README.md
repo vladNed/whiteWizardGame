@@ -1,5 +1,4 @@
-# whiteWizardGame ![build passing](https://raw.githubusercontent.com/dwyl/repo-badges/master/highresPNGs/build-passing.png)
-===========
+# whiteWizardGame ![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)
 
 ## Game Preview
 This is a text-based RPG game made in C#.
