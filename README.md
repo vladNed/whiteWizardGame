@@ -1,4 +1,4 @@
-# whiteWizardGame ![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)
+# whiteWizardGame ![Inline documentation](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)
 
 ## Game Preview
 This is a text-based RPG game made in C#.
