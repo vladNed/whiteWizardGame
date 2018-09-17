@@ -1,0 +1,11 @@
+C:\Users\nedvl\Desktop\WhiteWizard\bin\Debug\netcoreapp2.0\WhiteWizard.deps.json
+C:\Users\nedvl\Desktop\WhiteWizard\bin\Debug\netcoreapp2.0\WhiteWizard.runtimeconfig.json
+C:\Users\nedvl\Desktop\WhiteWizard\bin\Debug\netcoreapp2.0\WhiteWizard.runtimeconfig.dev.json
+C:\Users\nedvl\Desktop\WhiteWizard\bin\Debug\netcoreapp2.0\WhiteWizard.dll
+C:\Users\nedvl\Desktop\WhiteWizard\bin\Debug\netcoreapp2.0\WhiteWizard.pdb
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.csprojAssemblyReference.cache
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.csproj.CoreCompileInputs.cache
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.AssemblyInfoInputs.cache
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.AssemblyInfo.cs
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.dll
+C:\Users\nedvl\Desktop\WhiteWizard\obj\Debug\netcoreapp2.0\WhiteWizard.pdb
