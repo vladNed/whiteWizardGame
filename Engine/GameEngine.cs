@@ -3,10 +3,13 @@ using System;
 namespace WhiteWizard{
     class GameEngine{
 
-        public static void Start(string genesisCommand){
-            
+        static GUI gui = new GUI();
+
+        public static void Start(string genesisCommand,Player player){
+
             switch(genesisCommand){
-                case "startgame": 
+                case "start": 
+                    LoadLevel(player);
                     break;
                 case "controls":
                     break;
@@ -16,6 +19,20 @@ namespace WhiteWizard{
                     break;
                 default: break;
             }
+
         }
+
+        //Load Level method
+        public static void LoadLevel(Player player){
+            LoadGUI(player);
+            PrologueLevel.Start();
+        }
+        //Load the GUI method
+        public static void LoadGUI(Player player){ 
+            gui.Show(player);
+            gui.SetWrite();
+        }
+        //Load the Inventory method
+
     }
 }

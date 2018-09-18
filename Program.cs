@@ -934,7 +934,7 @@ namespace WhiteWizard
             engineCommand = MainMenuScreen.Show();
 
             //After the command has been issued, is given to the engine so the game can start
-            GameEngine.Start(engineCommand);
+            GameEngine.Start(engineCommand,currentPlayer);
 
             Console.ReadKey();
             

@@ -17,6 +17,7 @@ namespace WhiteWizard{
         private int Magic;
         private int Range;
         private int Items;
+        private int CurrentItems;
         private ConsoleColor Color = new ConsoleColor();
         #endregion
 
@@ -34,6 +35,7 @@ namespace WhiteWizard{
             this.Range = _range;
             this.Items = _items;
             this.Color = color;
+            this.CurrentItems = 0;
         }
         public Player(){
             this.Name = "NoName";
@@ -66,10 +68,22 @@ namespace WhiteWizard{
         public int GetXP(){
             return this.XP;
         }
+        public int GetMaxHP(){
+            return this.MaxHealth;
+        }
+        public int GetMaxXP(){
+            return this.MaxXP;
+        }
+        public int GetCurrentItems(){
+            return this.CurrentItems;
+        }
         #endregion
 
         #region Setters
         //TODO: Make the setters for the stats
+        public void SetItems(int value){
+            this.CurrentItems = value;
+        }
         #endregion
 
         public string[] PlayerStats(){
