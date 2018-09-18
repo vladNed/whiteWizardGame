@@ -927,17 +927,12 @@ namespace WhiteWizard
             Console.WindowWidth =85;
             Console.WindowHeight = 28;
             Player currentPlayer = new Player();
+            string engineCommand = "";
             
             IntroLevel.Start(ref currentPlayer);
-            MainMenuScreen.Show();
+            GameEngine.Start();
 
             Console.ReadKey();
-
-
-            //Start of the game
-            /* IntroLevel.Start(ref currentPlayer);
-
-            Console.WriteLine(currentPlayer.GetName()); */
             
             
            /*
