@@ -3,7 +3,11 @@ using System;
 namespace WhiteWizard{
 
     class GUI{
+
+        //import TextUtil so text an be managed
         static TextUtil util = new TextUtil();
+
+        //The show method displays the whole GUI to the player
         public void Show(Player player){
             
             Console.WindowWidth = 121;
@@ -32,6 +36,8 @@ namespace WhiteWizard{
             Console.Write("|");
         }
 
+        //Sets the cursor position on the GUI part where the text can be
+        //written
         public void SetWrite(){
             Console.SetCursorPosition(5,7);
         }

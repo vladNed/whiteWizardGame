@@ -85,7 +85,6 @@ namespace WhiteWizard{
             this.CurrentItems = value;
         }
         #endregion
-
         public string[] PlayerStats(){
             PropertyInfo[] _stats = typeof(Player).GetProperties();
             string[] _playerStats = new string[6];

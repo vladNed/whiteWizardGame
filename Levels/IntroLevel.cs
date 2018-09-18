@@ -7,6 +7,49 @@ namespace WhiteWizard {
 
         public static TextUtil txt = new TextUtil();
 
+        public static void Start(ref Player player){
+
+            //Variables
+            int x = 0;
+            int y = 0;
+            string playerName = "";
+            int playerHP = 0;
+            int playerMaxHP = 0;
+            int playerXP = 0;
+            int playerMaxXP = 0;
+            int itemsMax = 0;
+            string playerClass = "";
+            int playerStr = 0;
+            int playerMagic = 0;
+            int playerRange = 0;
+            ConsoleColor playerColor = new ConsoleColor();
+
+            //Boot text
+            IntroText();
+
+            //Setting the players name first
+            SetPlayerNameText();
+            PlayerName(ref playerName);
+
+            //RESET the color after the name is entered
+            txt.Reset();
+
+            //Setting the players class
+            ClassSelectText();
+            ClassMenu();
+
+            x = Console.CursorLeft;
+            y = Console.CursorTop;
+
+            //The player stats are made
+            ClassProps(x,y,ref playerHP, ref playerMaxHP, ref playerXP, ref playerMaxXP, ref itemsMax, ref playerClass, ref playerColor, ref playerStr, ref playerMagic, ref playerRange);
+
+            //Initialize the player charcter with the stats
+            player = new Player(playerName,playerHP,playerMaxHP,playerXP,playerMaxXP,playerClass,playerStr,playerMagic,playerRange,itemsMax,playerColor);
+
+            Console.Clear();
+        }
+
         private static void IntroText(){
 
             string introDrawing = System.IO.File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Drawings\introDrawing.txt");
@@ -198,48 +241,6 @@ namespace WhiteWizard {
                 playerRange = 20;
                 playerColor = ConsoleColor.Yellow;
             }
-        }
-        public static void Start(ref Player player){
-
-            //Variables
-            int x = 0;
-            int y = 0;
-            string playerName = "";
-            int playerHP = 0;
-            int playerMaxHP = 0;
-            int playerXP = 0;
-            int playerMaxXP = 0;
-            int itemsMax = 0;
-            string playerClass = "";
-            int playerStr = 0;
-            int playerMagic = 0;
-            int playerRange = 0;
-            ConsoleColor playerColor = new ConsoleColor();
-
-            //Boot text
-            IntroText();
-
-            //Setting the players name first
-            SetPlayerNameText();
-            PlayerName(ref playerName);
-
-            //RESET the color after the name is entered
-            txt.Reset();
-
-            //Setting the players class
-            ClassSelectText();
-            ClassMenu();
-
-            x = Console.CursorLeft;
-            y = Console.CursorTop;
-
-            //The player stats are made
-            ClassProps(x,y,ref playerHP, ref playerMaxHP, ref playerXP, ref playerMaxXP, ref itemsMax, ref playerClass, ref playerColor, ref playerStr, ref playerMagic, ref playerRange);
-
-            //Initialize the player charcter with the stats
-            player = new Player(playerName,playerHP,playerMaxHP,playerXP,playerMaxXP,playerClass,playerStr,playerMagic,playerRange,itemsMax,playerColor);
-
-            Console.Clear();
         }
     }  
 }
