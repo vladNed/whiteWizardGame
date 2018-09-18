@@ -929,8 +929,12 @@ namespace WhiteWizard
             Player currentPlayer = new Player();
             string engineCommand = "";
             
+            //Intro and MainMenu
             IntroLevel.Start(ref currentPlayer);
-            GameEngine.Start();
+            engineCommand = MainMenuScreen.Show();
+
+            //After the command has been issued, is given to the engine so the game can start
+            GameEngine.Start(engineCommand);
 
             Console.ReadKey();
             

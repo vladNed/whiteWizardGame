@@ -5,7 +5,7 @@ namespace WhiteWizard{
     class MainMenuScreen{
         static TextUtil util = new TextUtil();
         static Controls control = new Controls();
-        public string Show(){
+        public static string Show(){
             
             string menuGraphics = File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Drawings\menuDrawing.txt");
 
@@ -30,8 +30,7 @@ namespace WhiteWizard{
                 return "help";
             }
             if(x == 15){
-                Environment.Exit(0);
-                return null;
+                return "exit";
             }else{
                 return null;
             }
