@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/WhiteWizard.csproj"
+                "${workspaceFolder}/src/WhiteWizard.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\WhiteWizard.csproj",
+      "projectUniqueName": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\src\\WhiteWizard.csproj",
       "projectName": "WhiteWizard",
-      "projectPath": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\WhiteWizard.csproj",
+      "projectPath": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\src\\WhiteWizard.csproj",
       "packagesPath": "C:\\Users\\nedvl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\obj\\",
+      "outputPath": "C:\\Users\\nedvl\\Desktop\\WhiteWizard\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

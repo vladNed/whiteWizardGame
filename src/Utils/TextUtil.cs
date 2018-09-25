@@ -14,7 +14,7 @@ namespace WhiteWizard{
             Console.SetCursorPosition(left,top);
         }
 
-         public void EraseControl(int left, int top){
+        public void EraseControl(int left, int top){
 
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Write("="); 
