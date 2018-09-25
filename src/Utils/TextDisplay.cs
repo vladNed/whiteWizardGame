@@ -5,10 +5,13 @@ using System.Threading;
 namespace WhiteWizard{
 
    public class TextDisplay{
+
+        #region Variables
         private static string[,] textSplit;
         private static string[] loadedText;
         private static char[] separators = new char[]{' '};
-
+        #endregion
+        #region Text load/display
         private static void LoadText(string path){
 
             //load the text from the .txt document into the class
@@ -55,8 +58,10 @@ namespace WhiteWizard{
                 Console.SetCursorPosition(y,x);
             }
         }
-
+        #endregion
+        #region Dialog load/display
         
+        #endregion
 
     }
 }

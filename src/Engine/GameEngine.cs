@@ -38,9 +38,9 @@ namespace WhiteWizard{
         //Load Level method
         public static void LoadLevel(Player player){
             LoadGUI(player);
-            PrologueLevel.Start();
+            PrologueLevel.PrologueText();
             Start(gui.SetCommand(),1,player);
-            
+
         }
         //Load the GUI method
         public static void LoadGUI(Player player){ 
