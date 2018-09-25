@@ -936,20 +936,11 @@ namespace WhiteWizard
             //After the command has been issued, is given to the engine so the game can start
             GameEngine.Start(engineCommand,0,currentPlayer);
 
-            Console.ReadKey();
             
             
            /*
             string[] inventory = new string[itemsMax];
             int iCount = 0;
-           
-            //prologue Level
-           
-            
-           
-            GUI(playerName, playerHP, playerMaxHP, itemsMax, currentItems, playerXP, playerMaxXP);
-            Console.Clear(); 
-            
 
             //packing
             GUI(playerName, playerHP, playerMaxHP, itemsMax, currentItems, playerXP, playerMaxXP);

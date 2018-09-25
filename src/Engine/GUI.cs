@@ -40,6 +40,7 @@ namespace WhiteWizard{
         //written
         public void SetWrite(){
             Console.SetCursorPosition(5,7);
+            util.Reset();
         }
 
         public string SetCommand(){
