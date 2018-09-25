@@ -2,13 +2,16 @@ using System;
 
 namespace WhiteWizard{
     class PrologueLevel{
+
+        private static TextDisplay textDisplay = new TextDisplay();
+        private static Controls controls = new Controls();
         public static void Start(){
             PrologueText();
         }
 
-        public static void PrologueText(){
-            Console.WriteLine("Prologue");
-            Console.WriteLine("Many years passed since Aethel fought the white wizard. But this was not over yet.");
+        private static void PrologueText(){
+            textDisplay.DisplayText(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\prologueText.txt");
+            controls.showOnScreenCommands();
         }
     }
 }

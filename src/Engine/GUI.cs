@@ -41,5 +41,11 @@ namespace WhiteWizard{
         public void SetWrite(){
             Console.SetCursorPosition(5,7);
         }
+
+        public string SetCommand(){
+            Console.SetCursorPosition(3,14);
+            string command = Console.ReadLine().ToLower();
+            return command;
+        }
     }
 }

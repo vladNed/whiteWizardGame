@@ -12,3 +12,6 @@ C:\Users\nedvl\Desktop\WhiteWizard\test\obj\Debug\netcoreapp2.0\test.AssemblyInf
 C:\Users\nedvl\Desktop\WhiteWizard\test\obj\Debug\netcoreapp2.0\test.AssemblyInfo.cs
 C:\Users\nedvl\Desktop\WhiteWizard\test\obj\Debug\netcoreapp2.0\test.dll
 C:\Users\nedvl\Desktop\WhiteWizard\test\obj\Debug\netcoreapp2.0\test.pdb
+C:\Users\nedvl\Desktop\WhiteWizard\test\bin\Debug\netcoreapp2.0\WhiteWizard.dll
+C:\Users\nedvl\Desktop\WhiteWizard\test\bin\Debug\netcoreapp2.0\WhiteWizard.pdb
+C:\Users\nedvl\Desktop\WhiteWizard\test\obj\Debug\netcoreapp2.0\test.csproj.CopyComplete

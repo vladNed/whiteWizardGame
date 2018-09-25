@@ -5,19 +5,32 @@ namespace WhiteWizard{
 
         static GUI gui = new GUI();
 
-        public static void Start(string genesisCommand,Player player){
+        public static void Start(string command,int level,Player player){
 
-            switch(genesisCommand){
-                case "start": 
-                    LoadLevel(player);
-                    break;
-                case "controls":
-                    break;
-                case "help":
-                    break;
-                case "exit":
-                    break;
-                default: break;
+            if(level == 0){
+                switch(command){
+                    case "start": 
+                        LoadLevel(player);
+                        break;
+                    case "controls":
+                        break;
+                    case "help":
+                        break;
+                    case "exit":
+                        break;
+                    default: break;
+                }
+            } else if (level == 1){
+                switch(command){
+                    case "continue":
+                        break;
+                    case "exit":
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Start("continue",1,player);
+                        break;
+                }
             }
 
         }
@@ -26,6 +39,8 @@ namespace WhiteWizard{
         public static void LoadLevel(Player player){
             LoadGUI(player);
             PrologueLevel.Start();
+            Start(gui.SetCommand(),1,player);
+            
         }
         //Load the GUI method
         public static void LoadGUI(Player player){ 

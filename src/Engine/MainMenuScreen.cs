@@ -13,7 +13,7 @@ namespace WhiteWizard{
         //where the player can select what it wants
         public static string Show(){
             
-            string menuGraphics = File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\Drawings\menuDrawing.txt");
+            string menuGraphics = File.ReadAllText(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\menuDrawing.txt");
 
             //Display the MainMenu
             Console.Write(menuGraphics);

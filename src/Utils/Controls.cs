@@ -52,5 +52,14 @@ namespace WhiteWizard{
 
             } while (classSelected != true);
         }
+        public void showOnScreenCommands(){
+            int x = Console.CursorTop;
+            int y = Console.CursorLeft;
+
+            util.DrawControl(y,x+2,ConsoleColor.Green,">Continue");
+            util.DrawControl(y+20,x+2,ConsoleColor.Red,">Exit");
+        }
+
+        //Method that takes the input of the player (choice of the player)
     }
 }
