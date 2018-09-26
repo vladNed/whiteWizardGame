@@ -10,6 +10,7 @@ namespace WhiteWizard{
         private static string[,] textSplit;
         private static string[] loadedText;
         private static char[] separators = new char[]{' '};
+        TextUtil util = new TextUtil();
         #endregion
         #region Text load/display
         private static void LoadText(string path){
@@ -48,7 +49,7 @@ namespace WhiteWizard{
             for(int row = 0; row < textSplit.GetLength(0); row++){
                 for(int column = 0; column < textSplit.GetLength(1); column++){
                     if(textSplit[row,column] != null){
-                        Thread.Sleep(200);
+                        util.scrollEffect();
                         Console.Write(textSplit[row,column]+" ");
                     } else {
                         break;
@@ -60,7 +61,40 @@ namespace WhiteWizard{
         }
         #endregion
         #region Dialog load/display
-        
+        public void displayDialog(string path, ConsoleColor color){
+            
+            //Load the dialog first
+            LoadText(path);
+
+            //Save the coordinates for the cursor
+            int x = Console.CursorTop;
+            int y = Console.CursorLeft;
+
+            //Start the dialog
+            for(int row = 0; row < textSplit.GetLength(0); row++){
+                for(int column = 0; column < textSplit.GetLength(1);column++){
+                    if(textSplit[row,column] != null){
+                        if(textSplit[row,column] == "H:"){
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write("Hygwar: ");
+                            util.Reset();
+
+                        } else if(textSplit[row,column] == "A:"){
+                            Console.ForegroundColor = color;
+                            Console.Write("Aethel: ");
+                            util.Reset();
+                        } else {
+                            util.scrollEffect();
+                            Console.Write(textSplit[row,column]+" ");
+                        } 
+                    } else {
+                        break;
+                    }
+                }
+                x++;
+                Console.SetCursorPosition(y,x);
+            }
+        }
         #endregion
 
     }

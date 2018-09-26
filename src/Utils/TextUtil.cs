@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace WhiteWizard{
 
@@ -19,6 +20,10 @@ namespace WhiteWizard{
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Write("="); 
             Console.SetCursorPosition(left,top);
+        }
+
+        public void scrollEffect(){
+            Thread.Sleep(100);
         }
     }
 }
