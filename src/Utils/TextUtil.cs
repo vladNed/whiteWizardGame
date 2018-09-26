@@ -5,7 +5,7 @@ namespace WhiteWizard{
 
     class TextUtil{
         public void Reset(){
-            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public void DrawControl(int left, int top, ConsoleColor color, string text){

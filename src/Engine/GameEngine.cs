@@ -31,6 +31,10 @@ namespace WhiteWizard{
                         Start("continue",1,player);
                         break;
                 }
+            } else if (level == 2){
+                switch(command){
+                    
+                }
             }
 
         }

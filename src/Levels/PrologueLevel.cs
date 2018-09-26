@@ -20,6 +20,15 @@ namespace WhiteWizard{
             textDisplay.displayDialog(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\prologueHyngwarDialog.txt",playerColor);
             controls.showOnScreenCommands();
         }
+
+        public static void ProloguePacking(string playerClass){
+            textDisplay.DisplayText(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\prologuePacking.txt");
+            if(playerClass == "war")
+            {
+                //Pick up axe,coins,water,map
+                //Each pick will move the item to inventory
+            }       
+        }
         #endregion
 
     }

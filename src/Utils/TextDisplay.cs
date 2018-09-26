@@ -76,7 +76,7 @@ namespace WhiteWizard{
                 for(int column = 0; column < textSplit.GetLength(1);column++){
                     if(textSplit[row,column] != null){
                         if(textSplit[row,column] == "H:"){
-                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.Write("Hygwar: ");
                             util.Reset();
 
@@ -96,7 +96,7 @@ namespace WhiteWizard{
                 do{
                     continueDialog = Console.ReadKey(true);
                 }while(continueDialog.Key != ConsoleKey.Enter);
-                
+
                 x++;
                 Console.SetCursorPosition(y,x);
             }
