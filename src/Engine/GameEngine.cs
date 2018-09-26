@@ -42,11 +42,12 @@ namespace WhiteWizard{
 
         //Load Level method
         public static void LoadLevel1(Player player){
-            /* PrologueLevel.PrologueText();
+            PrologueLevel.PrologueText();
             Start(gui.SetCommand(),1,player);
             PrologueLevel.PrologueDialog(player.GetColor());
-            Start(gui.SetCommand(),1,player); */
+            Start(gui.SetCommand(),1,player); 
             PrologueLevel.ProloguePacking(player);
+            Start(gui.SetCommand(),1,player);
 
         }
         //Load the GUI method

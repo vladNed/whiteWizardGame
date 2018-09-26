@@ -173,6 +173,7 @@ namespace WhiteWizard{
 
                 ItemsPick(player, "blanket and flint stone");    
             }
+            controls.showOnScreenCommands();
         }
         #endregion
 
