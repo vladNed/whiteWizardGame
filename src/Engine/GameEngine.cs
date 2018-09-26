@@ -46,6 +46,7 @@ namespace WhiteWizard{
             Start(gui.SetCommand(),1,player);
             PrologueLevel.PrologueDialog(player.GetColor());
             Start(gui.SetCommand(),1,player);
+            PrologueLevel.ProloguePacking(player);
 
         }
         //Load the GUI method
