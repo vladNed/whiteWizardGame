@@ -130,6 +130,49 @@ namespace WhiteWizard{
                 ItemsPick(player,"coins");
               
             }
+            if(player.GetClass() == "adventurer"){
+
+                Reset();
+                Console.Write("Pick up your");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.Write(" travelling stick");
+                Reset();
+                Console.Write("?");
+                
+                ItemsPick(player,"travelling stick");
+
+                Console.Write("Pick up the bag of");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write(" coins");
+                Reset();
+                Console.Write("?");
+                
+                ItemsPick(player,"coins");
+
+                Console.Write("Pick up the ");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write(" meat");
+                Reset();
+                Console.Write("?");
+                
+                ItemsPick(player,"meat");
+
+                Console.Write("Pick up the ");
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.Write("knife");
+                Reset();
+                Console.Write("?");
+                
+                ItemsPick(player,"knife");
+
+                Console.Write("Pick up the ");
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.Write("blanket and flint stone");
+                Reset();
+                Console.Write("?");
+
+                ItemsPick(player, "blanket and flint stone");    
+            }
         }
         #endregion
 
