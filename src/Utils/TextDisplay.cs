@@ -10,6 +10,7 @@ namespace WhiteWizard{
         private static string[,] textSplit;
         private static string[] loadedText;
         private static char[] separators = new char[]{' '};
+        private static ConsoleKeyInfo continueDialog;
         TextUtil util = new TextUtil();
         #endregion
         #region Text load/display
@@ -62,7 +63,7 @@ namespace WhiteWizard{
         #endregion
         #region Dialog load/display
         public void displayDialog(string path, ConsoleColor color){
-            
+
             //Load the dialog first
             LoadText(path);
 
@@ -91,6 +92,11 @@ namespace WhiteWizard{
                         break;
                     }
                 }
+                
+                do{
+                    continueDialog = Console.ReadKey(true);
+                }while(continueDialog.Key != ConsoleKey.Enter);
+                
                 x++;
                 Console.SetCursorPosition(y,x);
             }

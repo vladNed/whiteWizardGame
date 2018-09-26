@@ -16,8 +16,9 @@ namespace WhiteWizard{
         }
 
         //Method to display dialogue in prologue level
-        public static void PrologueDialog(){
-
+        public static void PrologueDialog(ConsoleColor playerColor){
+            textDisplay.displayDialog(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\prologueHyngwarDialog.txt",playerColor);
+            controls.showOnScreenCommands();
         }
         #endregion
 

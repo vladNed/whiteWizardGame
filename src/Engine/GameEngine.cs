@@ -40,6 +40,8 @@ namespace WhiteWizard{
             LoadGUI(player);
             PrologueLevel.PrologueText();
             Start(gui.SetCommand(),1,player);
+            PrologueLevel.PrologueDialog(player.GetColor());
+            Start(gui.SetCommand(),1,player);
 
         }
         //Load the GUI method

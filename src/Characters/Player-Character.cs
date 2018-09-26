@@ -77,6 +77,9 @@ namespace WhiteWizard{
         public int GetCurrentItems(){
             return this.CurrentItems;
         }
+        public ConsoleColor GetColor(){
+            return this.Color;
+        }
         #endregion
 
         #region Setters
