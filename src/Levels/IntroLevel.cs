@@ -3,9 +3,8 @@ using System;
 
 namespace WhiteWizard {
 
-    class IntroLevel {
+    class IntroLevel : TextUtil{
 
-        public static TextUtil txt = new TextUtil();
 
         public static void Start(ref Player player){
 
@@ -32,7 +31,7 @@ namespace WhiteWizard {
             PlayerName(ref playerName);
 
             //RESET the color after the name is entered
-            txt.Reset();
+            Reset();
 
             //Setting the players class
             ClassSelectText();
@@ -59,7 +58,7 @@ namespace WhiteWizard {
             Console.WriteLine(introDrawing);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(introCommand);
-            txt.Reset();
+            Reset();
             Console.ReadKey();
             Console.SetCursorPosition(33, 5);
         }
@@ -81,7 +80,7 @@ namespace WhiteWizard {
             Console.WriteLine("   -------------------------------------");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\n   1.Warrior");
-            txt.Reset();
+            Reset();
             Console.SetCursorPosition(26, 9);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("   2.Hunter");
@@ -90,7 +89,7 @@ namespace WhiteWizard {
             Console.SetCursorPosition(26, 11);
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("   4.Adventurer");
-            txt.Reset();
+            Reset();
             Console.SetCursorPosition(3, 9);
         }
         private static void PlayerName(ref string playerName){

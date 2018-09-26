@@ -2,10 +2,10 @@ using System;
 
 namespace WhiteWizard{
 
-    class GUI{
+    class GUI: TextUtil{
 
         //import TextUtil so text an be managed
-        static TextUtil util = new TextUtil();
+
 
         //The show method displays the whole GUI to the player
         public void Show(Player player){
@@ -14,10 +14,9 @@ namespace WhiteWizard{
             Console.WindowHeight = 30;
 
             //GUI
-            util.Reset();
             Console.Clear();
             Console.SetCursorPosition(0, 0);
-            
+            Reset();
             Console.Write(
 @"|----------------------------------------------------------------------------------------------------------------------|
 |    Health:{0}/{1}                 |                 XP:{2}/{3}                 |         Name:{4}  Items:{5}/{6}   
@@ -40,12 +39,12 @@ namespace WhiteWizard{
         //written
         public void SetWrite(){
             Console.SetCursorPosition(5,7);
-            util.Reset();
+            Reset();
         }
 
         public string SetCommand(){
             Console.SetCursorPosition(14,3);
-            util.Reset();
+            Reset();
             string command = Console.ReadLine().ToLower();
             return command;
         }

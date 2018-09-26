@@ -1,16 +1,20 @@
 using System;
+using src.Engine;
 
 namespace WhiteWizard{
     class GameEngine{
 
-        static GUI gui = new GUI();
+        public static GUI gui = new GUI();
+        public static Inventory inventory;
 
         public static void Start(string command,int level,Player player){
 
             if(level == 0){
                 switch(command){
-                    case "start": 
-                        LoadLevel(player);
+                    case "start":
+                        LoadInventory(player.GetItems());
+                        LoadGUI(player); 
+                        LoadLevel1(player);
                         break;
                     case "controls":
                         break;
@@ -23,6 +27,7 @@ namespace WhiteWizard{
             } else if (level == 1){
                 switch(command){
                     case "continue":
+                        LoadGUI(player);
                         break;
                     case "exit":
                         Environment.Exit(0);
@@ -31,17 +36,12 @@ namespace WhiteWizard{
                         Start("continue",1,player);
                         break;
                 }
-            } else if (level == 2){
-                switch(command){
-                    
-                }
-            }
+            } 
 
         }
 
         //Load Level method
-        public static void LoadLevel(Player player){
-            LoadGUI(player);
+        public static void LoadLevel1(Player player){
             PrologueLevel.PrologueText();
             Start(gui.SetCommand(),1,player);
             PrologueLevel.PrologueDialog(player.GetColor());
@@ -54,6 +54,16 @@ namespace WhiteWizard{
             gui.SetWrite();
         }
         //Load the Inventory method
+        public static void LoadInventory(int maxItems){
+            inventory = new Inventory(maxItems);
+        }
 
+        public static void AddItemToInventory( string value,Player player){
+            if(player.GetCurrentItems() < player.GetItems()){
+                inventory.SetInventoryItem(player.GetCurrentItems(),value);
+            } else {
+                //dont do anything
+            }
+        }
     }
 }

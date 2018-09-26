@@ -4,14 +4,13 @@ using System.Threading;
 
 namespace WhiteWizard{
 
-   public class TextDisplay{
+   public class TextDisplay: TextUtil{
 
         #region Variables
         private static string[,] textSplit;
         private static string[] loadedText;
         private static char[] separators = new char[]{' '};
         private static ConsoleKeyInfo continueDialog;
-        TextUtil util = new TextUtil();
         #endregion
         #region Text load/display
         private static void LoadText(string path){
@@ -50,7 +49,7 @@ namespace WhiteWizard{
             for(int row = 0; row < textSplit.GetLength(0); row++){
                 for(int column = 0; column < textSplit.GetLength(1); column++){
                     if(textSplit[row,column] != null){
-                        util.scrollEffect();
+                        scrollEffect();
                         Console.Write(textSplit[row,column]+" ");
                     } else {
                         break;
@@ -78,14 +77,14 @@ namespace WhiteWizard{
                         if(textSplit[row,column] == "H:"){
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.Write("Hygwar: ");
-                            util.Reset();
+                            Reset();
 
                         } else if(textSplit[row,column] == "A:"){
                             Console.ForegroundColor = color;
                             Console.Write("Aethel: ");
-                            util.Reset();
+                            Reset();
                         } else {
-                            util.scrollEffect();
+                            scrollEffect();
                             Console.Write(textSplit[row,column]+" ");
                         } 
                     } else {

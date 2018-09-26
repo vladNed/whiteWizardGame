@@ -3,8 +3,8 @@ using System.Threading;
 
 namespace WhiteWizard{
 
-    class TextUtil{
-        public void Reset(){
+    public class TextUtil{
+        public static void Reset(){
             Console.ForegroundColor = ConsoleColor.White;
         }
 
