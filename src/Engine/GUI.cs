@@ -45,6 +45,7 @@ namespace WhiteWizard{
         public string SetCommand(){
             Console.SetCursorPosition(14,3);
             Reset();
+            ClearCommandLine();
             string command = Console.ReadLine().ToLower();
             return command;
         }

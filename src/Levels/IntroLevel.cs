@@ -195,7 +195,7 @@ namespace WhiteWizard {
                 playerStr = 100;
                 playerMagic = 0;
                 playerRange = 0;
-                playerColor = ConsoleColor.DarkRed;
+                playerColor = ConsoleColor.Red;
             }
             //Archer
             if (x == 29 && y == 9)

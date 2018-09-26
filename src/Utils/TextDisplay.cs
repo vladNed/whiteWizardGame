@@ -12,6 +12,7 @@ namespace WhiteWizard{
         private static char[] separators = new char[]{' '};
         private static ConsoleKeyInfo continueDialog;
         #endregion
+
         #region Text load/display
         private static void LoadText(string path){
 
@@ -60,6 +61,7 @@ namespace WhiteWizard{
             }
         }
         #endregion
+        
         #region Dialog load/display
         public void displayDialog(string path, ConsoleColor color){
 
@@ -101,6 +103,7 @@ namespace WhiteWizard{
             }
         }
         #endregion
+
 
     }
 }

@@ -7,6 +7,7 @@ namespace WhiteWizard{
         private static TextDisplay textDisplay = new TextDisplay();
         private static Controls controls = new Controls();
         public static string commandLine = "";
+    
         #endregion
 
         #region Text and Dialog
@@ -24,16 +25,18 @@ namespace WhiteWizard{
 
         public static void ProloguePacking(Player player){
             textDisplay.DisplayText(@"C:\Users\nedvl\Desktop\WhiteWizard\src\Drawings\prologuePacking.txt");
-            if(player.GetClass() == "war")
+            if(player.GetClass() == "warrior")
             {            
                 Reset();
+                CursorPosition();
                 Console.Write("Pick up the ");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("axe");
                 Reset();
-                Console.Write("?  ");
+                Console.Write("?");
 
                 ItemsPick(player,"axe");
+
 
                 Console.Write("Pick up the bag of ");
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -41,7 +44,9 @@ namespace WhiteWizard{
                 Reset();
                 Console.Write("?  ");
 
+
                 ItemsPick(player,"coins");
+
 
                 Console.Write("Pick up a ");
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -49,7 +54,9 @@ namespace WhiteWizard{
                 Reset();
                 Console.Write("?  ");
 
+
                 ItemsPick(player,"bottle of water");
+
 
                 Console.Write("Pick up the ");
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
@@ -59,12 +66,12 @@ namespace WhiteWizard{
 
                 ItemsPick(player,"map");
                 
-                //Each pick will move the item to inventory
             }       
         }
         #endregion
 
         public static void ItemsPick(Player player, string item){
+            CursorPosition();
             do{
                 commandLine = GameEngine.gui.SetCommand();
                 commandLine.ToLower();
@@ -74,16 +81,21 @@ namespace WhiteWizard{
                     case "ok":
                     case "sure":
                         GameEngine.AddItemToInventory(item,player);
+                        SetCursorLast();
+                        Console.Write("    *Hmmm I sure need this!*");
                         break;
                     case "no":
                     case "dont pick":
                     case "nope":
-                        Console.WriteLine("O well i guess i dont need this");
+                        SetCursorLast();
+                        Console.Write("   *O well I guess I don't need this.*");
                         break;
                     default: commandLine = "";
                         break;
                 }
-            }while(commandLine!="");
+
+            }while(commandLine=="");
+            Console.SetCursorPosition(5,GetPreviousTopCursor()+1);
         }
 
     }
